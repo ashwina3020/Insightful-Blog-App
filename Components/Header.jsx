@@ -15,7 +15,7 @@ const Header = () => {
 
         const formData = new FormData();
         formData.append("email", email);
-        const res = await axios.post('/api/email', formData);
+        const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/email`, formData);
 
         if(res.data.success){
             toast.success(res.data.message);

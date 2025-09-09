@@ -37,7 +37,7 @@ const page = () => {
         formData.append('author', data.author);
         formData.append('authorImage', data.authorImage);
 
-        const res = await axios.post('/api/blog', formData);
+        const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/blog`, formData);
         console.log("response from add product = " , res);
 try{
 
