@@ -10,7 +10,7 @@ const page = () => {
     const [blogs,setBlogs] = useState([]);
 
     const fetchBlogs = async() => {
-        const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/blog`);
+        const res = await axios.get('/api/blog');
 
         console.log("blog data ->", res);
 
@@ -21,7 +21,7 @@ const page = () => {
     const deleteBlog = async (mongoId) => {
   if (mongoId != null) {
     try {
-      const res = await axios.delete(`${process.env.NEXT_PUBLIC_API_URL}/blog`, {
+      const res = await axios.delete('/api/blog', {
         params: { id: mongoId }
       });
       console.log("blog deleted successfully");

@@ -17,7 +17,7 @@ const page = ({params}) => {
         //and based on it, backend will find the blog
         //and fetch it 
         console.log("fetching blog data")
-        const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/blog`, {
+        const response = await axios.get('/api/blog', {
             params:{
                 id:id
             }

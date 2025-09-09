@@ -12,7 +12,7 @@ const BlogList = () => {
   const [blogs, setBlogs] = useState([]);
 
   const fetchBlogs = async ()=> {
-    const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/blog`);
+    const response = await axios.get('/api/blog');
     setBlogs(response.data.blogs);
     console.log(response.data.blogs);
   }
